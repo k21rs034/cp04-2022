@@ -39,6 +39,10 @@
             $('#btnC').click(function(e) {
                 btnCClick(e);
             });
+
+            $('#btnImg').click(function(e) {
+                btnImgClick(e);
+            });
             init();
         });
 
@@ -179,6 +183,19 @@
             audio.play();
         }
 
+        function img(){
+            var canvas = $("#imgcanvas")[0];
+            var ctx = canvas.getContext("2d");
+            var img = new Image();
+            img.src = "s000_386.jpg";
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0, 370, 300);
+            };
+            var audio = new Audio();
+            audio.src = "pin.wav";
+            audio.play();
+        }
+
         // ButtonAがクリックされた時の処理
         function btnAClick(e) {
             active = true;
@@ -218,12 +235,17 @@
                 }
             }
         }
+
+        function btnImgClick(e){
+            img();
+        }
+
     </script>
 </head>
 
 <body>
     <canvas id="mycanvas" width="200" height="200">Test</canvas>
-    <canvas id="imgcanvas" width="300" height="300">Test2</canvas>
+    <canvas id="imgcanvas" width="370" height="300">Test2</canvas>
 
     <div id="minuteStr">〇</div>
     <div id="secondStr">〇</div>
