@@ -81,3 +81,9 @@
         font-family: Times;
         border-radius: 20px;
     }
+
+    #btnImg{
+        font-size: 30px;
+        position:absolute; top:250px; 
+        left:70%; right:10px;
+    }
