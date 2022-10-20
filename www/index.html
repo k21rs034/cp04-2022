@@ -201,7 +201,7 @@
             active = true;
             startTime = new Date();
             $("#btnA").prop("disabled", true);
-
+            
         }
 
         // ButtonBがクリックされた時の処理
@@ -231,7 +231,8 @@
                 analog(rest);
                 if (rest <= 0) {
                     active = false;
-                    alarm();
+                    alarm(); 
+                    $("#btnA").prop("disabled", false);
                 }
             }
         }
