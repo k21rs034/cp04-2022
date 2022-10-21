@@ -183,7 +183,7 @@
             audio.play();
         }
 
-        function img(){
+        function img() {
             var canvas = $("#imgcanvas")[0];
             var ctx = canvas.getContext("2d");
             var img = new Image();
@@ -201,7 +201,6 @@
             active = true;
             startTime = new Date();
             $("#btnA").prop("disabled", true);
-            
         }
 
         // ButtonBがクリックされた時の処理
@@ -233,16 +232,15 @@
                 analog(rest);
                 if (rest <= 0) {
                     active = false;
-                    alarm(); 
+                    alarm();
                     $("#btnA").prop("disabled", false);
                 }
             }
         }
 
-        function btnImgClick(e){
+        function btnImgClick(e) {
             img();
         }
-
     </script>
 </head>
 
